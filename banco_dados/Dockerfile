@@ -4,7 +4,7 @@ RUN mkdir -p /app/data
 
 WORKDIR /app/data
 
-COPY gene.csv /app/data
+COPY formulario.csv /app/data
 
 COPY script.sh /app/data
 
