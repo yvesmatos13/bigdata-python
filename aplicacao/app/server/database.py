@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from appsettings import database
 
-async def getconection(collection):
+def getconection():
     client = MongoClient(database['url'])
     db = client[database['database']]
-    return db[collection]
+    return db[database['collection']]

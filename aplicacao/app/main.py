@@ -1,8 +1,7 @@
-from fastapi import FastAPI
+from server.formulario import Formulario
 
-from app.server.routers import formulario_router as lojas
+def main():
+    formularios = Formulario.findFormularios()
+    print(formularios)
 
-
-app = FastAPI(docs_url="/swagger", title="Estacio", version="1.0.0")
-
-app.include_router(lojas.router)
+main()
